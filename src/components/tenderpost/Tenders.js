@@ -4,7 +4,8 @@ import "./tenders_module.css";
 import DisplayTenders from './DisplayAvailableTenders';
 import Web3Modal from "web3modal"
 import {providers,Contract} from "ethers";
-import {ABI} from "../tenderpost_abi";
+//import {ABI} from "../tenderpost_abi";
+import { BiderAbi } from "../bidercontract_abi";
 //import Web3 from 'web3';
 import { BigNumber } from 'ethers';
 //from display
@@ -33,7 +34,7 @@ import { BigNumber } from 'ethers';
     let btnapprove = useRef(null);
     //let Tenders =[];
     const [Tenders, setTenders] = useState([]);
-    const TenderOwnerAddress ="0x298E18f27318524013DB17d59808Bdcd256c6B8D";
+    const TenderOwnerAddress = "0x69D143d4aF4c767234e8E9e93f82ea1bAC0b7107"//"0x298E18f27318524013DB17d59808Bdcd256c6B8D";
     const [tenderslength,setLength] = useState(0);
     const web3ModalRef = useRef();
     const [walletconnect,setWalletConnect] = useState(false);
@@ -58,7 +59,7 @@ const [address,setaddress] = useState(null);
                 const signer = await getProviderOrSigner(true);
                 const tenderContract = new Contract(
                     TenderOwnerAddress,
-                    ABI,                   
+                    BiderAbi,                   
                     signer,
                 );
                 const results = await tenderContract.writeTenderDetails(...params
@@ -67,7 +68,7 @@ const [address,setaddress] = useState(null);
                alert("add results successful")
                
               } catch (error) {
-               alert(error)
+               alert("the error is",error)
               }
               alert(`🎉 You successfully added "${params[0]}".`)
              getAllTenders()
@@ -78,7 +79,7 @@ const [address,setaddress] = useState(null);
                 const provider = await getProviderOrSigner();
                 const TenderContracts = new Contract(
                     TenderOwnerAddress,
-                    ABI,
+                    BiderAbi,
                     provider,
                 ) ;
                 

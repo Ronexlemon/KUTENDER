@@ -1,23 +1,24 @@
 import "./bider_module.css";
 import { BiderAbi } from "../bidercontract_abi";
-import Web3Modal, { providers } from "web3modal";
+import Web3Modal from "web3modal";
 import { useRef,useEffect,useState } from "react";
 import { useLocation } from 'react-router-dom';
 
-import { Contract } from "ethers";
+import {providers,Contract} from "ethers";
 const BiderForm =() =>{
     const {state} = useLocation();
 const { id } = state; // Read values passed on state
-const ContractBiderAddress ="0x260E2eC3855355372d0c76343e6351BB1473109B"
+const ContractBiderAddress ="0x69D143d4aF4c767234e8E9e93f82ea1bAC0b7107"
 const Web3ModalRef = useRef();
 const [biderCompanyName, setBiderCompanyName] = useState();
 const [biderContact, setBiderContact] = useState();
 const [_tenderIndex, settenderIndex] = useState();
 const [bidertypeOfGoods, setTypeOfGoods] = useState();
+
 //provide sugner or provider
 const getProviderOrSigner= async(needSigner = false)=>{
     const provider =await  Web3ModalRef.current.connect();
-    const web3Provider = new providers.we3provider(provider);
+    const web3Provider = new providers.Web3Provider(provider);
    // check if network is goerli
    const {chainId}  = await web3Provider.getNetwork();
    if(chainId !==5){
@@ -44,8 +45,9 @@ useEffect(()=>{
         
       });
       getProviderOrSigner();
+      settenderIndex(id);
 
-})
+},[])
 //btnsubmit to submit the biders tender details
 const  btnsubmit=async ()=>{
     const params=[
@@ -105,7 +107,7 @@ const test =()=>{
         </div>
         <div className="btnpostcancel">
         <button onClick={test} className="btnsclose">Close</button>
-                <button className="btnsopen">Post</button>
+                <button onClick={btnsubmit} className="btnsopen">Post</button>
 
         </div>
         
