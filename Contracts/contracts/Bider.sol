@@ -10,24 +10,35 @@ struct biderDetails{
     string companyName;
     string contact;
     string goodsDealsWith;
+    string tenderOwnerName;
+    uint bidsTenderIndex;
 }
-mapping (address => biderDetails) bidItems;
+mapping (uint => biderDetails) bidItems;
+uint bidstenderlength =0;
 
  
 function writeBiderDetails(uint _tenderIndex,string memory _companyName,string memory _contact,string memory _goodsDealsWith)public{
-    bidItems[tenderItems[_tenderIndex].owner] = biderDetails(payable(msg.sender),_companyName,_contact,_goodsDealsWith);
+    uint _bidsindex = bidstenderlength;
+    bidItems[_tenderIndex] = biderDetails(payable(msg.sender),_companyName,_contact,_goodsDealsWith,tenderItems[_tenderIndex].companyName,_bidsindex);
+    bidstenderlength = bidstenderlength.add(1);
 }
-function readBiderDetails(uint _tenderIndex)public  view  returns(
+function readBiderDetails(uint _tenderbidsIndex)public  view  returns(
     address,
     string memory,
     string memory,
-    string memory
+    string memory,
+    string memory,
+    uint 
 ){
-    return(bidItems[tenderItems[_tenderIndex].owner].bidowner,
-    bidItems[tenderItems[_tenderIndex].owner].companyName,
-    bidItems[tenderItems[_tenderIndex].owner].contact,
-    bidItems[tenderItems[_tenderIndex].owner].goodsDealsWith
+    return(bidItems[_tenderbidsIndex].bidowner,
+    bidItems[_tenderbidsIndex].companyName,
+    bidItems[_tenderbidsIndex].contact,
+    bidItems[_tenderbidsIndex].goodsDealsWith,
+    bidItems[_tenderbidsIndex].tenderOwnerName,
+    bidItems[_tenderbidsIndex].bidsTenderIndex
     );
 } 
-
+function getTotalBindsLength()public view returns(uint){
+    return bidstenderlength;
+}
 }
