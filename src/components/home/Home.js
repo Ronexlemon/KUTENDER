@@ -44,7 +44,7 @@ const Home = (props) => {
                             <div className="Navigation">
                                 <h5 id="TenderHeaderContent">Find all the listed tenders here.</h5>
                                 <div id="TenderMiddleLine"></div>
-                                <button className="btns" onClick={() => navigate('/DisplayAvailableTenders')}>Available Tenders</button>
+                                <button className="btns" onClick={() => navigate('/AvailableTenders')}>Available Tenders</button>
                             </div>
 
                         </div>
