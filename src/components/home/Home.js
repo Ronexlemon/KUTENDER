@@ -23,7 +23,7 @@ const Home = (props) => {
                         <div className="Navigation">
                             <h5>Find all the listed tenders here.</h5>
 
-                            <button className="btns" onClick={() => navigate('/DisplayAvailableTenders')}>Available Tenders</button>
+                            <button className="btns" onClick={() => navigate('/AvailableTenders')}>Available Tenders</button>
 
                         </div>
 

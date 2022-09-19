@@ -8,7 +8,8 @@ import DisplayBids from './displayBids';
 function Approve() {
   const [walletconnect,setWalletConnect] = useState(false);
   const [BidTenders,setBidTenders] = useState([]);
-  const ContractBiderAddress ="0x69D143d4aF4c767234e8E9e93f82ea1bAC0b7107"
+  const [index,setIndex] = useState();
+  const ContractBiderAddress ="0x98e97F1c51554de4A21158bddddcf86ce936f83F";
 const Web3ModalRef = useRef();
 //provide sugner or provider
 const getProviderOrSigner= async(needSigner = false)=>{
@@ -49,7 +50,8 @@ const getAllBids =async () =>{
         contactAddress : bids[2],
         goodDealsWith : bids[3],
         companyOfferTender : bids[4],
-        bidIndex: bids[5]
+        bidIndex: bids[5],
+        choice : bids[6]
 
       }
 
@@ -63,6 +65,20 @@ const getAllBids =async () =>{
   const allbids = await Promise.all(_bidTenders);
   setBidTenders(allbids);
 
+}
+//Approve function
+const approveTender =async (ids)=>{
+  
+  const signer = await getProviderOrSigner(true);
+
+  const BiderContract = new Contract(
+    ContractBiderAddress,
+    BiderAbi,
+    signer,
+  )
+  const approves = await BiderContract.approveTender(ids);
+  alert(approves);
+  
 }
 
 //call the metamask on page reload
@@ -85,7 +101,7 @@ useEffect(()=>{
     <div>
       <h1>hello</h1>
       <main>
-        <DisplayBids bids={BidTenders}/>
+        <DisplayBids bids={BidTenders} approve={approveTender}/>
       </main>
     </div>
   )
