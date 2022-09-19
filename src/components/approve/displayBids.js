@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 
  const DisplayBids =(props) =>{
-  
+  const [color,setColor] = useState(true);
   
     return <div className="card-container">
 
@@ -21,6 +21,8 @@ import { useNavigate } from "react-router-dom";
                              <p><RiBuilding2Fill/><b> {tender.companyNames}</b></p>
                              <p>{tender.contactAddress}</p>
                              <h4>{tender.goodDealsWith}</h4>
+                             
+                             <h4 style={{color:color?"green":"red"}}>{tender.choice==1?"Approved" :"Waiting" }</h4>
                            
                  </div>
                  <div className='tenderCard-middle' id='tendercard-middle'>
@@ -29,7 +31,7 @@ import { useNavigate } from "react-router-dom";
                  <div className='bid-btn-approve-btn' id='bid-btn-approve-btn'>
                   
                      
-                     <button className='btn-aprove' onClick={props.Approve}>Approve</button>
+                     <button className='btn-aprove' onClick={()=>props.approve(index)}>Approve</button>
                      <button className="deletebtn" ><BsTrash/></button>
                   </div>
                  

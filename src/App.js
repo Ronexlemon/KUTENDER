@@ -11,6 +11,7 @@ import { BrowserRouter,Router,Route, Routes } from 'react-router-dom';
 import DisplayTenders from './components/tenderpost/DisplayAvailableTenders';
 import Available from './components/tenderpost/Available';
 import Approve from './components/approve/Approve';
+import AvailableTenders from './components/tenderpost/AvailableTenders';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
     <Route path='/TenderAllocation' element={<TenderAllocation/>}/>
     <Route path='/DisplayAvailableTenders' element={<DisplayTenders/>}/>
     <Route path='/Available' element={<Available/>}/>
+    <Route path='/AvailableTenders' element={<AvailableTenders/>}/>
     <Route path='/Approve' element={<Approve/>}/>
     </Routes>
     </BrowserRouter>
