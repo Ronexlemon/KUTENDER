@@ -325,7 +325,7 @@ return(
                 <input type="text" id="amount" name="amount" required onChange = {(e) => setAmount(e.target.value)} value ={amount}/><br/>
             
         
-            {/* <button className="btnClose">Close</button> */}
+            {<button className="btnClose">Close</button> }
             <button className="btnPost"onClick={() => { btnPosts(); closeForm();}}   type="submit" value="Submit">Post</button>
            
             </form>              

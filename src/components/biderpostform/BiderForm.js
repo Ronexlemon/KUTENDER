@@ -1,3 +1,4 @@
+import React from 'react';
 import "./bider_module.css";
 import { BiderAbi } from "../bidercontract_abi";
 import Web3Modal from "web3modal";
