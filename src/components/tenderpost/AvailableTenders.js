@@ -91,7 +91,7 @@ setTenders(tenderss);
 
     return(
         <div>
-            <h3>Hello</h3>   <main  >
+               <main  >
                 <DisplayTenders tenders={Tenders} approve={Approve}  /> 
                 {/* tenders={Tenders} */}
                 {/* {/* deleteTender={deleteTender} */}
