@@ -62,7 +62,7 @@ const Home = (props) => {
                             <div className="Navigation">
                                 <h5>View who was allocated a tender</h5>
                                 <div id="TenderMiddleLine"></div>
-                                <button className="btns">Tender Allocation</button>
+                                <button onClick={() => navigate("/TenderAllocation")} className="btns">Tender Allocation</button>
                             </div>
                         </div>
                         <div className="Tender">

@@ -9,7 +9,7 @@ import {providers,Contract} from "ethers";
 const BiderForm =() =>{
     const {state} = useLocation();
 const { id } = state; // Read values passed on state
-const ContractBiderAddress ="0x98e97F1c51554de4A21158bddddcf86ce936f83F"//"0xb6D6d2e56f6C5E519c871BC682048027171Ba0E1"
+const ContractBiderAddress ="0xA05239144E9039232f4C6b875EA1d26f91111656"//"0xb6D6d2e56f6C5E519c871BC682048027171Ba0E1"
 const Web3ModalRef = useRef();
 const [biderCompanyName, setBiderCompanyName] = useState();
 const [biderContact, setBiderContact] = useState();

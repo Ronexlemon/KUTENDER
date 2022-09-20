@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { GiRotaryPhone } from 'react-icons/gi';
 import { RiBuilding2Fill} from 'react-icons/ri';
@@ -8,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
- const DisplayBids =(props) =>{
+ const DisplayTenderAllocation =(props) =>{
 
 
   const [color,setColor] = useState(true);
@@ -26,7 +27,7 @@ import { useNavigate } from "react-router-dom";
                              <h4>{tender.goodDealsWith}</h4>
 
                              
-                             <h4 style={{color:color?"green":"red"}}>{tender.choice==1?"Approved" :<h4 style={{color:color?"orange":"green"}}>Waiting</h4> }</h4>
+                             {/* <h4 style={{color:color?"green":"red"}}>{tender.choice==1?"Approved" :<h4 style={{color:color?"orange":"green"}}>Waiting</h4> }</h4> */}
                            
                  </div>
                  <div className='tenderCard-middle' id='tendercard-middle'>
@@ -35,8 +36,8 @@ import { useNavigate } from "react-router-dom";
                  <div className='bid-btn-approve-btn' id='bid-btn-approve-btn'>
                   
                      
-                     <button className='btn-aprove' onClick={()=>props.approve(index)}>Approve</button>
-                     <button className="deletebtn" ><BsTrash/></button>
+                     {/* <button className='btn-aprove' onClick={()=>props.approve(index)}>Approve</button>
+                     <button className="deletebtn" ><BsTrash/></button> */}
                   </div>
                  
      
@@ -46,4 +47,4 @@ import { useNavigate } from "react-router-dom";
 
 </div>
 };
-export default DisplayBids;
+export default DisplayTenderAllocation;
