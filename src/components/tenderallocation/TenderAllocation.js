@@ -3,9 +3,9 @@ import { BiderAbi } from "../bidercontract_abi";
 import Web3Modal from "web3modal";
 import { useRef,useEffect,useState } from "react";
 import {providers,Contract} from "ethers";
-import DisplayBids from './displayBids';
+import DisplayTenderAllocation from './DisplayTenderAllocation';
 
-function Approve() {
+function TenderAllocation() {
   const [walletconnect,setWalletConnect] = useState(false);
   const [BidTenders,setBidTenders] = useState([]);
   const [index,setIndex] = useState();
@@ -102,10 +102,10 @@ useEffect(()=>{
     <div>
       
       <main>
-        <DisplayBids bids={BidTenders} approve={approveTender}/>
+        <DisplayTenderAllocation bids={BidTenders} approve={approveTender}/>
       </main>
     </div>
   )
 }
 
-export default Approve
+export default TenderAllocation;

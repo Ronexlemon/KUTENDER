@@ -5,8 +5,10 @@ const GOERLI_PRIVATE_KEY = process.env.GOERLI_PRIVATE_KEY;
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: "0.8.9",
+  
   networks:{
     goerli:{
+      allowUnlimitedContractSize:true,
       url: ALCHEMY_API_KEY_URL,
       accounts: [GOERLI_PRIVATE_KEY],
     },

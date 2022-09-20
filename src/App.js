@@ -3,7 +3,7 @@ import React from 'react';
 import Tenders from './components/tenderpost/Tenders';
 import { useState } from "react";
 import BiderForm from './components/biderpostform/BiderForm';
-import TenderAllocation  from './components/tenderallocation/tenderAllocation';
+import TenderAllocation  from './components/tenderallocation/TenderAllocation';
 import {Helmet} from 'react-helmet';
 import './App.css';
 import Home from "./components/home/Home";

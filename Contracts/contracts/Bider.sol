@@ -58,7 +58,7 @@ function approveTender(uint  _tenderbidsIndex)public   onlyOwner returns(address
     string memory
     
      ){
-        require(msg.sender != address(this),"Only The Owner can Approve");
+        require(msg.sender ==  tenderItems[_tenderbidsIndex].owner,"Only The Owner can Approve");
         require(bidItems[_tenderbidsIndex].choice == statuschoices.Waiting,"Waitng Aproval");
        // choice = statuschoices.Approved;
        bidItems[_tenderbidsIndex].choice = statuschoices.Approved;
@@ -71,4 +71,25 @@ function approveTender(uint  _tenderbidsIndex)public   onlyOwner returns(address
     );
 
 }
+//DisplayOnlyApproved Tenders
+function onlyApproveTender(uint  _tenderbidsIndex)public view    returns(address,
+    string memory,
+    string memory,
+    string memory
+    
+     ){
+        //require(msg.sender != address(this),"Only The Owner can Approve");
+        require(bidItems[_tenderbidsIndex].choice == statuschoices.Approved,"Waitng Aproval");
+       // choice = statuschoices.Approved;
+       //bidItems[_tenderbidsIndex].choice = statuschoices.Approved;
+         return(bidItems[_tenderbidsIndex].bidowner,
+    bidItems[_tenderbidsIndex].companyName,
+    bidItems[_tenderbidsIndex].contact,
+    bidItems[_tenderbidsIndex].goodsDealsWith
+    
+    
+    );
+
+}
+
 }
