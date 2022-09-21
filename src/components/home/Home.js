@@ -69,7 +69,7 @@ const Home = (props) => {
                             <div className="Navigation">
                                 <h5>Track your tender application</h5>
                                 <div id="TenderMiddleLine"></div>
-                                <button className="btns">Application Status</button>
+                                <button onClick={() => navigate("/TenderStatus")} className="btns">Application Status</button>
                             </div>
                         </div>
                     </div>

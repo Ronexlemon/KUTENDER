@@ -19,18 +19,17 @@ import { useNavigate } from "react-router-dom";
 
 {props.bids.map((tender,index) =>(
      <div className='tenderCard' key= {tender.bidIndex} >
-                  <div className='tenderCardHeader' id='tenderCardHeader'>
+ {(tender.choice==1)?
+ <div className='tenderCardHeader' id='tenderCardHeader'>
                      
                          
-                             <p><RiBuilding2Fill/><b> {tender.companyNames}</b></p>
-                             <p>{tender.contactAddress}</p>
-                             <h4>{tender.goodDealsWith}</h4>
+ <p><RiBuilding2Fill/><b> {tender.companyNames}</b></p>
+ <p>{tender.contactAddress}</p>
+ <h4>{tender.goodDealsWith}</h4>
 
-                             
-                             {/* <h4 style={{color:color?"green":"red"}}>{tender.choice==1?"Approved" :<h4 style={{color:color?"orange":"green"}}>Waiting</h4> }</h4> */}
-                           
-                 </div>
-                 <div className='tenderCard-middle' id='tendercard-middle'>
+ 
+ {/* <h4 style={{color:color?"green":"red"}}>{tender.choice==1?"Approved" :<h4 style={{color:color?"orange":"green"}}>Waiting</h4> }</h4> */}
+ <div className='tenderCard-middle' id='tendercard-middle'>
                      <h5><GiRotaryPhone/>&nbsp;{tender.companyOfferTender}&emsp;&emsp;&emsp;&emsp;<MdDateRange/>&nbsp;{tender.contactAddress} &emsp;&emsp;&emsp;&emsp;<HiOutlineMail/>&nbsp;{tender.contactAddress}</h5>
                   </div>
                  <div className='bid-btn-approve-btn' id='bid-btn-approve-btn'>
@@ -39,11 +38,12 @@ import { useNavigate } from "react-router-dom";
                      {/* <button className='btn-aprove' onClick={()=>props.approve(index)}>Approve</button>
                      <button className="deletebtn" ><BsTrash/></button> */}
                   </div>
-                 
-     
-              </div>
+</div>
+ :``}              
+     </div>
                
   ))}
+  
 
 </div>
 };
