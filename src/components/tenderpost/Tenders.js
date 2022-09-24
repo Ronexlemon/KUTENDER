@@ -304,13 +304,14 @@ useEffect(()=>{
 return(
     <div className="mainTenders">
         <button onClick={DectectWindow} className="connectWallet">
-            <h2 id="connect">Connect<br/>Wallet</h2>
+            <h2 id="connect">Connect Wallet</h2>
         </button>
         
        {/* <button className='btnPost' onClick={openForm}>Add</button> */}
         
         <div ref={getformdiv}  className="postForm">
             <form onSubmit={ handleAddTender}>
+                <br/>
                 <label>Company Name</label><br/>
                 <input type="text" id="company" name="company" required onChange = {(e) => setCompanyName(e.target.value)} value ={companyName}/><br/>
                 <label>Tender Description</label><br/>
@@ -324,8 +325,8 @@ return(
                 <label>Amount</label><br/>
                 <input type="text" id="amount" name="amount" required onChange = {(e) => setAmount(e.target.value)} value ={amount}/><br/>
             
-        
-            {<button className="btnClose">Close</button> }
+        <br/>
+           { <button className="btnClose">Close</button> }
             <button className="btnPost"onClick={() => { btnPosts(); closeForm();}}   type="submit" value="Submit">Post</button>
            
             </form>              

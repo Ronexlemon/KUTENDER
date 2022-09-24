@@ -3,11 +3,14 @@
   position:absolute;
   top: 0;
   right: 0;
-  padding: auto;
+  /* padding: auto; */
   margin: 20px;
-  background-color: #10185C;
+  width:200px;
+  background-color: #090e42;
   height: 70px;
   border-radius: 15px;
+  white-space: nowrap;
+  
 }
 #connect{
   
@@ -16,17 +19,14 @@
 .postForm{
 box-shadow: 0 8px 9px 0 rgba(0,0,0,0.2);
 border-radius: 30px;
-  height: 50%;
-  
+  height: 340px;
   text-align: center;
-  column-gap: 10px;
-  width: 30%;
- position:fixed;
-  border-color: burlywood;
-  float: left;
-  margin-left: 25px;
-  margin-top: 25px;
+  width: 50%;
+  border-color: burlywood;  
+  margin-top: 140px;
+ margin-left:341px;
   background: #D9D9D9;
+  padding: 10px;
 }
 .open_submit{
   position:fixed;
@@ -43,10 +43,12 @@ border-radius: 30px;
   height: 30px;
 }
 .btnClose{
-  margin-left: 300px;
+  /* margin-left: 30px; */
   width: 80px;
-  background: #1D2132;
-  color: white;
+  background: #b49999;
+  color:white;
+  border-radius: 20px;
+  height: 30px;
   
 
 }

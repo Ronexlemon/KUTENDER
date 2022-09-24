@@ -32,12 +32,7 @@ import { useNavigate } from "react-router-dom";
  <div className='tenderCard-middle' id='tendercard-middle'>
                      <h5><GiRotaryPhone/>&nbsp;{tender.companyOfferTender}&emsp;&emsp;&emsp;&emsp;<MdDateRange/>&nbsp;{tender.contactAddress} &emsp;&emsp;&emsp;&emsp;<HiOutlineMail/>&nbsp;{tender.contactAddress}</h5>
                   </div>
-                 <div className='bid-btn-approve-btn' id='bid-btn-approve-btn'>
-                  
-                     
-                     {/* <button className='btn-aprove' onClick={()=>props.approve(index)}>Approve</button>
-                     <button className="deletebtn" ><BsTrash/></button> */}
-                  </div>
+                 
 </div>
  :``}              
      </div>
