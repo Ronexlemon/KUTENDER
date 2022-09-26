@@ -1,74 +1,149 @@
-.btnConnect{
-   
-    float: right;
-    margin: 10px;
-    
-}
-.mainBiderForm{
+.mainBiderForm {
     width: 100%;
-    height: 100%;
-    
-}
-.btnpostcancel{
-    position: absolute;
-    margin-top: 20px;
-   width: max-content;
-    bottom: 0;
-    margin: 20px;
-
+    height: 1350px;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(228, 228, 228, 0.795);
 }
 
+.connect-wallet-button {
+    /* border: 1px solid black; */
+    width: 100px;
+    margin-top: 0px;
+    width: 1000px;
+    margin-bottom: 30px;
+    height: 130px;
+}
 
-#btnconnectAccount{
+.connectWallet {
+    background-color: #1223b8;
+    height: 80px;
+    width: 120px;
+    border: 1px solid #1223b8;
     border-radius: 15px;
-    color: #7FDD6F;
-    background-color: #10185C;
-
-    
+    float: right;
+    margin-top: 40px;
+    margin-right: 0px;
 }
-.biderForm{
-    position: relative;
-    height: 75%;
-    text-align: center;
+
+#connect {
+    color: #eee562;
+    margin-top: 15px;
+}
+
+.connectWallet:hover {
+    transform: scale(1.06);
+    transition: 0.2s;
+}
+
+.bidForm-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
     column-gap: 10px;
-    width: 30%;
-  overflow: hidden;
-    border-radius: 15px;
-    border-color: #10185C;
-    float: left;
-    border-width: 2px;
-    border-style: solid;
-    margin-left: 25px;
-    margin-top: 25px;
-    background: #D9D9D9;
+    background-color: rgba(252, 249, 249, 1);
+    margin-top: 0px;
+    width: 1100px;
+    height: 1100px;
+    border-radius: 6px;
 }
-.BiderFormInput{
-   align-items: center;
-   margin-top: 30px;
-   border-radius: 15px;
-   padding: 2px;
-   margin: 5px;
-   height: 50%;
-   background-color: #7FDD6F;
+.bidForm-description{
+    margin-right: 170px;
+    
 }
-.inputs{
-    margin-bottom: 50px;
+.bidForm-description h1 {
+    font-size: 65px;
+    color: rgb(39, 37, 37);
 }
-.btnsclose{
+
+.bidForm-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(208, 206, 211);
+    height: 550px;
+    width: 850px;
+    border-radius: 5px;
+    box-shadow: 0 4px 5px 0 rgb(70, 67, 67);
+    margin-top: 100px;
+    background-color: rgb(247, 247, 248);
+}
+
+.tenderForm-description-p-container {
+    display: flex;
+    background-color: rgb(247, 245, 245);
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    box-shadow: 0 3px 4px 0 grey;
+    border: 1px solid rgb(141, 140, 143);
+    margin-right: 280px;
+    width: 500px;
+    margin-top: 70px;
+}
+
+.tenderForm-description-p-container-blank {
+    width: 6px;
+    background-color: #8d8e92;
+}
+
+.tenderForm-description-p {
+    margin-left: 10px;
+}
+
+.btnpostcancel {
+    width: 500px;
+    margin-left: 200px;
+    margin-top: 100px;
+}
+
+.BiderFormInput {
+    width: 700px;
+    height: 500px;
+    margin-top: 30px;
+}
+
+.form-input{
+    margin-left: 45px;
+    width: 600px;
+    height: 40px;
+    padding-left: 10px;
+    margin-bottom: 13px;
+    border-radius: 6px;
+    border: 0.5px solid rgb(163, 160, 160);
+  }
+
+  .label{
+    margin-left: 45px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(48, 46, 46);
+  }
+
+  ::placeholder{
+    color: rgb(207, 201, 201);
+  }
+  
+  .form-input::hover{
+    border: 1px solid rgb(20, 20, 20);
+  }
+
+.btnsclose {
     margin-left: 10px;
     margin-right: 150px;
     margin-top: 10px;
     background-color: #10185C;
     border-radius: 15px;
-    color: aliceblue;
+
 }
-.btnsopen{
-    
+
+.btnsopen {
+
     margin-top: 10px;
     background-color: #10185C;
     border-radius: 15px;
     color: aliceblue;
-}
-.mainBiderForm{
-    position: fixed;
 }

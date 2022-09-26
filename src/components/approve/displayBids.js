@@ -1,49 +1,51 @@
 import React, { useState } from 'react';
+import './approve.css';
 import { GiRotaryPhone } from 'react-icons/gi';
-import { RiBuilding2Fill} from 'react-icons/ri';
+import { RiBuilding2Fill } from 'react-icons/ri';
 import { BsTrash } from 'react-icons/bs';
-import{ MdDateRange } from 'react-icons/md';
+import { MdDateRange } from 'react-icons/md';
 import { HiOutlineMail } from 'react-icons/hi';
 import { useNavigate } from "react-router-dom";
 
 
 
- const DisplayBids =(props) =>{
+
+const DisplayBids = (props) => {
 
 
-  const [color,setColor] = useState(true);
+  const [color, setColor] = useState(true);
 
+
+  return <div className="approve-tender-main-page">
+    <div className='approve-card-container'>
+    {props.bids.map((tender, index) => (
+      <div className='approve-container' key={tender.bidIndex} >
+        <div className='approve-container-tenderee' id='approve-container-tenderee'>
+        <div className="approveCardHeader-blank"></div>
+        <div className='approve-container-tenderee-content'>
+          <p id='company-name'><RiBuilding2Fill /> <b> {tender.companyNames}</b></p>
+          <p id='documents-link'><b id='documents-tag'>Documents: </b><a href="">{tender.goodDealsWith}</a></p>
+          <p id='tenderee-contact'><GiRotaryPhone />  {tender.contactAddress}</p>
+          
+          <p className='approval-status' style={{ color: color ? "green" : "red" }}> {tender.choice == 1 ? "Approved" : <p  style={{ color: color ? "orange" : "green" }}> Waiting</p>}</p>
+        </div>
+        </div>
+        <div className='tenderer-div' id='tenderer-div'>
+          <p id='tenderer-name'><b id='tenderer-tag'>Tenderer: </b>{tender.companyOfferTender}</p>
+        </div>
+
+        <div className='approve-btn-div' id='approve-btn-div'>
+
+          <button className='approve-btn' onClick={() => props.approve(index)}>Approve</button>
+          {/* <button className="deletebtn" ><BsTrash /></button> */}
+
+        </div>
+
+
+      </div>
   
-    return <div className="card-container">
-
-{props.bids.map((tender,index) =>(
-     <div className='tenderCard' key= {tender.bidIndex} >
-                  <div className='tenderCardHeader' id='tenderCardHeader'>
-                     
-                         
-                             <p><RiBuilding2Fill/><b> {tender.companyNames}</b></p>
-                             <p>{tender.contactAddress}</p>
-                             <h4>{tender.goodDealsWith}</h4>
-
-                             
-                             <h4 style={{color:color?"green":"red"}}>{tender.choice==1?"Approved" :<h4 style={{color:color?"orange":"green"}}>Waiting</h4> }</h4>
-                           
-                 </div>
-                 <div className='tenderCard-middle' id='tendercard-middle'>
-                     <h5><GiRotaryPhone/>&nbsp;{tender.companyOfferTender}&emsp;&emsp;&emsp;&emsp;<MdDateRange/>&nbsp;{tender.contactAddress} &emsp;&emsp;&emsp;&emsp;<HiOutlineMail/>&nbsp;{tender.contactAddress}</h5>
-                  </div>
-                 <div className='bid-btn-approve-btn' id='bid-btn-approve-btn'>
-                  
-                     
-                     <button className='btn-aprove' onClick={()=>props.approve(index)}>Approve</button>
-                     <button className="deletebtn" ><BsTrash/></button>
-                  </div>
-                 
-     
-              </div>
-               
-  ))}
-
-</div>
+    ))}
+  </div>
+  </div>
 };
 export default DisplayBids;

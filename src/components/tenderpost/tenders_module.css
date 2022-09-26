@@ -1,123 +1,305 @@
-
-.connectWallet{
-  position:absolute;
-  top: 0;
-  right: 0;
-  padding: auto;
-  margin: 20px;
-  background-color: #10185C;
-  height: 70px;
-  border-radius: 15px;
+.mainTenders{
+  height: 1600px;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  background-color: rgba(228, 228, 228, 0.795);
 }
-#connect{
-  
-  color: #7FDD6F;
+.connect-wallet-button{
+  /* border: 1px solid black; */
+  width: 100px;
+  margin-top: 0px;
+  width: 1000px;
+  margin-bottom: 30px;
+  height: 130px;
 }
-.postForm{
-box-shadow: 0 8px 9px 0 rgba(0,0,0,0.2);
-border-radius: 30px;
-  height: 50%;
-  
-  text-align: center;
-  column-gap: 10px;
-  width: 30%;
- position:fixed;
-  border-color: burlywood;
-  float: left;
-  margin-left: 25px;
-  margin-top: 25px;
-  background: #D9D9D9;
-}
-.open_submit{
-  position:fixed;
-  bottom: 0px;
-  margin-bottom: 100px;
-
-}
-.btnPost{
-  margin-left: 30px;
-  width: 80px;
-  background: #b49999;
-  color:white;
-  border-radius: 20px;
-  height: 30px;
-}
-.btnClose{
-  margin-left: 300px;
-  width: 80px;
-  background: #1D2132;
-  color: white;
-  
-
-}
-.tenderCard{
-  
-  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2);
-  padding: 5px;
-  width: 550px;
-  height: 150px;
-  border-color: burlywood;
-  margin-top: 10px;
-  margin-right: 15px;
+.connectWallet {
+  background-color: #1223b8;
+  height: 80px;
+  width: 120px;
+  border: 1px solid #1223b8;
   border-radius: 15px;
   float: right;
-  height: 100%;
-  background-color: rgba(229, 229, 229, 1);
-  
+  margin-top:40px;
+  margin-right: 0px;
+}
+.connectWallet:hover{
+  transform: scale(1.06);
+  transition: 0.2s;
+}
+
+#connect {
+  color: #eee562;
+  margin-top: 15px;
+}
+
+.postForm-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 6px 5px 3px rgba(0, 0, 0, 0.2);
+  column-gap: 10px;
+  background-color: rgba(252, 249, 249, 1);
+  margin-top: 0px;
+  width: 1100px;
+  height: 1400px;
+  border-radius: 6px;
+
+}
+.postForm-content-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(208, 206, 211);
+  height: 700px;
+  width: 850px;
+  border-radius: 5px;
+  box-shadow: 0 4px 5px 0 rgb(70, 67, 67);
+  margin-top: 100px;
+  background-color: rgb(247, 247, 248);
+}
+
+.postForm{
+ 
+  width: 700px;
+  height: 700px;
+  margin-top: 30px;
+
+}
+.tenderForm-description{
+  width: 800px;
   
 }
 
-#tenderCardHeader{
+.tenderForm-description h1{
+  font-size: 65px;
+  color: rgb(39, 37, 37);
+}
+.tenderForm-description-p-container{
+  display: flex;
+  background-color: rgb(247, 245, 245);
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+  box-shadow: 0 3px 4px 0 grey;
+  border: 1px solid rgb(141, 140, 143);
+  margin-right: 280px;
+  width: 500px;
+  margin-top: 70px;
+}
+.tenderForm-description-p-container-blank{
+  
+  width: 6px;
+  background-color: #8d8e92;
+}
+.tenderForm-description-p{
+  margin-left: 10px;
 
-  border-radius: 15px;
-  border: 1px solid rgb(156, 147, 135);
-  width:540px;
+}
+
+.btnPost{
+  margin-left: 30px;
+  width: 150px;
+  font-weight: 550;
+  border-radius: 70px;
+  height: 55px;
+  background: #e96767;
+  border: 1px solid #e96767;
+  color: #632222;
+  font-size: 15px;
+}
+
+.btnPost:hover{
+  transform: scale(1.06);
+  transition: 0.2s;
+  color: rgb(34, 32, 32);
+}
+
+.btnClose {
+  width: 150px;
+  border: 0.5px solid rgb(59, 57, 57);
+  font-size: 15px;
+  margin-left: 135px;
+  background-color: rgb(247, 247, 248);
+  font-weight: 550;
+  color: rgb(34, 32, 32);
+  border-radius: 70px;
+  height: 55px;
+
+}
+
+.btnClose:hover{
+  transform: scale(1.06);
+  transition: 0.2s;
+  color: rgb(19, 18, 18);
+}
+
+.postForm-buttons{
+ /* border: 1px solid black; */
+  width: 600px;
+  margin-left: 295px;
+  margin-top: 80px;
+  
+}
+
+.label{
+  margin-left: 45px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(48, 46, 46);
+}
+.form-input{
+  margin-left: 45px;
+  width: 600px;
+  height: 40px;
+  padding-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 6px;
+  border: 0.5px solid rgb(163, 160, 160);
+}
+
+#description{
+  height:60px;
+}
+
+
+::placeholder{
+  color: rgb(207, 201, 201);
+}
+.form-input::hover{
+  border: 1px solid rgb(20, 20, 20);
+}
+
+
+
+
+/* --------------------------------------------------------------------------------- */
+/* Available Tender Card CSS*/
+/* --------------------------------------------------------------------------------- */
+
+
+.available-tenders-page{
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  height: 1300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(252, 249, 249, 1);
+}
+
+#available-tenders-page-h1{
+  margin-left: 200px;
+  font-size: 60px;
+  width: 600px;
+  margin-bottom: 85px;
+  color: rgb(39, 37, 37);
+}
+
+#horizontal-line{
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 5px;
+}
+.card-container{
+
+  margin-top: 30px;
+  border: 1px solid rgba(204, 201, 201, 0.795);
+  height: 1200px;
+  width: 1300px;
+  background: rgba(228, 228, 228, 0.795);
+  box-shadow: 0 4px 6px 0 rgb(8, 8, 8);
+  border-radius: 5px;
+}
+
+.tenderCard {
+
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  float: right;
+  width: 604px;
+  height: 160px;
+  border-color: burlywood;
+  margin-top: 20px;
+  margin-right: 30px;
+  border-radius: 7px;
+  background-color: white;
+
+}
+
+#tenderCardHeader {
+  display: flex;
+  overflow: hidden;
+  border-radius:7px;
+  border: 2px solid white;
+  width: 600px;
   height: 90px;
   line-height: 2px;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
-  background-color: white;
-  
+  background-color: #f7f2f2;
+
 }
-#tenderCardHeader p{
+
+#tenderCardHeader p {
   text-align: left;
   margin-left: 10px;
 }
 
-#tendercard-middle{
+.tenderCardHeader-blank{
+  width: 6px;
+  background-color: #9c9c9c;
+  
+}
+
+.tenderCardHeader-content{
+  margin-left: 5px;
+}
+.tender-amount-description-p{
+  line-height: 10px;
+}
+#company-name{
+  margin-left: 5px;
+  margin-top: 9px;
+  font-size: 16px;
+  color: rgb(43, 41, 41);
+}
+#tender-description{
+  font-size: 14px;
+  
+}
+#tender-amount{
+  font-size: 13px;
+  font-weight: 600;
+}
+
+#tendercard-middle {
+  height: 25px;
+  
+}
+
+#tendercard-middle h5 {
+  margin-top: 5px;
+  margin-left: 40px;
+  font-weight: 400;
+}
+
+.bid-btn{
   height: 35px;
-  text-align: center;
 }
 
-#tendercard-middle h5{
-
-  margin-top: 8px;
+#btn-bid {
+  float: right;
+  margin-right: 15px;
+  width: 75px;
+  height: 31px;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 20px;
+  background: #f7f2f2;
+  border: 1px solid rgb(51, 50, 50);
 }
-#btn-bid{
-  margin-right: 100px;
+#btn-bid:hover{
+  transform: scale(1.05);
+  border: 0.5px solid rgb(63, 61, 61);
+  transition: 0.2s;
 }
-.tenderTemplates{
-  border-radius: 15px;
-  background-color: #d7d8dd;
-  width:70%;
-  height: 200px;
-  margin-left: 10%;
-  
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

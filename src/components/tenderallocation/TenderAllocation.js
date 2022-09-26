@@ -101,7 +101,7 @@ useEffect(()=>{
   return (
     <div>
       
-      <main>
+      <main className='tender-allocation-main-page'>
         <DisplayTenderAllocation bids={BidTenders} approve={approveTender}/>
       </main>
     </div>

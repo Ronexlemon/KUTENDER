@@ -1,15 +1,15 @@
 
-import React from 'react';
-import { DisplayTenders} from './DisplayAvailableTenders.js';
-import {Tenders} from './Tenders.js';
+// import React from 'react';
+// import { DisplayTenders} from './DisplayAvailableTenders.js';
+// import {Tenders} from './Tenders.js';
 
-function Available() {
-  return (
+// function Available() {
+//   return (
   
-    <div></div>
+//     <div></div>
  
     
-  )
-}
+//   )
+// }
 
-export default Available;
+// export default Available;
