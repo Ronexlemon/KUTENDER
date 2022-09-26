@@ -1,3 +1,4 @@
+
 .mainTenders{
   height: 1600px;
   display: flex;
@@ -24,6 +25,21 @@
   float: right;
   margin-top:40px;
   margin-right: 0px;
+
+
+.connectWallet{
+  position:absolute;
+  top: 0;
+  right: 0;
+  /* padding: auto; */
+  margin: 20px;
+  width:200px;
+  background-color: #090e42;
+  height: 70px;
+  border-radius: 15px;
+  white-space: nowrap;
+  
+
 }
 .connectWallet:hover{
   transform: scale(1.06);
@@ -62,6 +78,7 @@
 }
 
 .postForm{
+
  
   width: 700px;
   height: 700px;
@@ -71,6 +88,18 @@
 .tenderForm-description{
   width: 800px;
   
+=======
+box-shadow: 0 8px 9px 0 rgba(0,0,0,0.2);
+border-radius: 30px;
+  height: 340px;
+  text-align: center;
+  width: 50%;
+  border-color: burlywood;  
+  margin-top: 140px;
+ margin-left:341px;
+  background: #D9D9D9;
+  padding: 10px;
+
 }
 
 .tenderForm-description h1{
@@ -110,6 +139,16 @@
   color: #632222;
   font-size: 15px;
 }
+
+.btnClose{
+  /* margin-left: 30px; */
+  width: 80px;
+  background: #b49999;
+  color:white;
+  border-radius: 20px;
+  height: 30px;
+  
+
 
 .btnPost:hover{
   transform: scale(1.06);

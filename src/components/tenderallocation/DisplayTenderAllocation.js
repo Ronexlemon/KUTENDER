@@ -27,6 +27,7 @@ const DisplayTenderAllocation = (props) => {
 
             <p className='tender-allocation-card-header-content'><RiBuilding2Fill /><b id='tenderee-name-allocation'> {tender.companyNames}</b></p>
   
+
             <p className='tender-allocation-card-header-content' id='tender-description'><MdOutlineDescription/> {tender.goodDealsWith}</p>
             <p className='tender-allocation-card-header-content' id='tenderee-contact-allocation'><AiOutlinePhone/> {tender.contactAddress}</p>
 
@@ -37,6 +38,32 @@ const DisplayTenderAllocation = (props) => {
       </div>
 
     ))}
+
+
+    return <div className="card-container">
+
+{props.bids.map((tender,index) =>(
+     <div className='tenderCard' key= {tender.bidIndex} >
+ {(tender.choice==1)?
+ <div className='tenderCardHeader' id='tenderCardHeader'>
+                     
+                         
+ <p><RiBuilding2Fill/><b> {tender.companyNames}</b></p>
+ <p>{tender.contactAddress}</p>
+ <h4>{tender.goodDealsWith}</h4>
+
+ 
+ {/* <h4 style={{color:color?"green":"red"}}>{tender.choice==1?"Approved" :<h4 style={{color:color?"orange":"green"}}>Waiting</h4> }</h4> */}
+ <div className='tenderCard-middle' id='tendercard-middle'>
+                     <h5><GiRotaryPhone/>&nbsp;{tender.companyOfferTender}&emsp;&emsp;&emsp;&emsp;<MdDateRange/>&nbsp;{tender.contactAddress} &emsp;&emsp;&emsp;&emsp;<HiOutlineMail/>&nbsp;{tender.contactAddress}</h5>
+                  </div>
+                 
+</div>
+ :``}              
+     </div>
+               
+  ))}
+  
 
 
   </div>
