@@ -31,7 +31,7 @@ const DisplayBids = (props) => {
         <div className="approveCardHeader-blank"></div>
         <div className='approve-container-tenderee-content'>
           <p id='company-name'><RiBuilding2Fill /> <b> {tender.companyNames}</b></p>
-          <p id='documents-link'><b id='documents-tag'>Documents: </b><a href="">{tender.goodDealsWith}</a></p>
+          <p id='documents-link'><b id='documents-tag'>Documents: </b><a href={tender.goodDealsWith} target="_blank">{tender.goodDealsWith}</a></p>
           <p id='tenderee-contact'><GiRotaryPhone />  {tender.contactAddress}</p>
           
           <p className='approval-status' style={{ color: color ? "green" : "red" }}> {tender.choice == 1 ? "Approved" : <p  style={{ color: color ? "orange" : "green" }}> Waiting</p>}</p>
