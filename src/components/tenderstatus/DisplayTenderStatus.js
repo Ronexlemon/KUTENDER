@@ -27,7 +27,7 @@ const DisplayTenderStatus = (props) => {
 
 
           <p id='company-name-status'><RiBuilding2Fill /><b> {tender.companyNames}</b></p>
-          <p id='goods-dealt-status'><MdOutlineDescription/> {tender.goodDealsWith}</p>
+          <p id='goods-dealt-status'><MdOutlineDescription/> <a href={tender.goodDealsWith} target="_blank">link</a></p>
           <p id='company-offer-tender-status'><b id='tenderer-tag'>Tenderer: </b>{tender.companyOfferTender}</p>
 
          <div className='tender-status-div'> 
